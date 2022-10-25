@@ -31,13 +31,13 @@ link_etc_default_keyboard:
 	fi
 
 links: link_evdev link_etc_default_keyboard
-	@if [ ! -f /usr/share/X11/xkb/symbols/takbl ]; then \
-	  sudo ln usr/share/X11/xkb/symbols/takbl /usr/share/X11/xkb/symbols/takbl; \
-	  echo "[/usr/share/X11/xkb/symbols/takbl => usr/share/X11/xkb/symbols/takbl] hard link has been created"; \
+	@if [ ! -f /usr/share/X11/xkb/symbols/madvo ]; then \
+	  sudo ln usr/share/X11/xkb/symbols/madvo /usr/share/X11/xkb/symbols/madvo; \
+	  echo "[/usr/share/X11/xkb/symbols/madvo => usr/share/X11/xkb/symbols/madvo] hard link has been created"; \
 	fi
 
 install: links
-	@setxkbmap -layout takbl
+	@setxkbmap -layout madvo
 
 clean_link_evdev:
 	@if [ -f $(BACKUP)/evdev.xml ]; then \
@@ -54,7 +54,7 @@ clean_link_etc_default_keyboard:
 	fi
 
 clean_links: clean_link_evdev clean_link_etc_default_keyboard
-	@sudo rm -f /usr/share/X11/xkb/symbols/takbl
+	@sudo rm -f /usr/share/X11/xkb/symbols/madvo
 
 remove: clean_links
 	@setxkbmap -layout us

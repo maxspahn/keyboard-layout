@@ -5868,6 +5868,16 @@
     </layout>
 		<layout>
       <configItem>
+        <name>madvo</name>
+        <shortDescription>MA</shortDescription>
+        <description>Max Spahn (dvorak personalized)</description>
+        <languageList>
+          <iso639Id>fra</iso639Id>
+        </languageList>
+      </configItem>
+		</layout>
+		<layout>
+      <configItem>
         <name>takbl</name>
         <shortDescription>TA</shortDescription>
         <description>Tony Aldon (kbl basic form)</description>
